@@ -24,7 +24,7 @@
             }
           
             nav a{
-                color: black;
+                color: white;
                 text-decoration: none;
             }
             
@@ -44,6 +44,15 @@
                 padding: 10px;
                 background-color: #cef2f3;
             }
+            
+            h1{
+                color: white;
+            }
+            
+            p{
+                color: white;
+            }
+            
         </style>
     </head>
     
