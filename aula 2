@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{margin: 0 auto;  
+            }
+            
+            header {
+                width: 90%;
+                background-color: #affbff;
+                padding: 10px;
+            }
+            
+            nav{
+                width: 90%;
+                background-color: #d2fdfe;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+            }
+          
+            nav a{
+                color: black;
+                text-decoration: none;
+            }
+            
+            nav a:hover {
+                color:#d2fdfe;
+            }
+            
+            main{
+                width: 90%;
+                height: 500px;
+                padding: 10px;
+                background-color: blue;
+            }
+            
+            footer{
+                width: 90%;
+                padding: 10px;
+                background-color: black;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Sofia</h1>
+        </header>
+        
+        <main></main>
+        
+        <nav>
+            <a href="cadpro.html">Cadastro de Produtor<a/>
+            <a href="listapro.html">Listagem de Produtos<a/>
+            <a href="excpro.html">Excluir Produtos<a/>
+            <a href="altpro.html">Alterar Produtos<a/>  
+        </nav>
+        
+        <footer>
+            <center>
+                <p>Desenvolvido por: Sofia</p>
+            </center>
+        </footer>
+        
+    </body>
+</html>
