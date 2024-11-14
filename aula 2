@@ -11,13 +11,13 @@
             
             header {
                 width: 90%;
-                background-color: #affbff;
+                background-color: #b4e5e7;
                 padding: 10px;
             }
             
             nav{
                 width: 90%;
-                background-color: #d2fdfe;
+                background-color: #9bd7db;
                 padding: 10px;
                 display: flex;
                 align-items: center;
@@ -29,20 +29,20 @@
             }
             
             nav a:hover {
-                color:#d2fdfe;
+                color:#1d628d;
             }
             
             main{
                 width: 90%;
                 height: 500px;
                 padding: 10px;
-                background-color: blue;
+                background-color: #cef2f3;
             }
             
             footer{
                 width: 90%;
                 padding: 10px;
-                background-color: black;
+                background-color: #cef2f3;
             }
         </style>
     </head>
@@ -55,7 +55,7 @@
         <main></main>
         
         <nav>
-            <a href="cadpro.html">Cadastro de Produtor<a/>
+            <a href="cadpro.html">Cadastro de Produtos<a/>
             <a href="listapro.html">Listagem de Produtos<a/>
             <a href="excpro.html">Excluir Produtos<a/>
             <a href="altpro.html">Alterar Produtos<a/>  
