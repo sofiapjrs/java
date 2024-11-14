@@ -50,7 +50,7 @@
             }
             
             p{
-                color: white;
+                color: #6ec5df;
             }
             
         </style>
@@ -61,14 +61,15 @@
             <h1>Sofia</h1>
         </header>
         
-        <main></main>
-        
         <nav>
-            <a href="cadpro.html">Cadastro de Produtos<a/>
-            <a href="listapro.html">Listagem de Produtos<a/>
-            <a href="excpro.html">Excluir Produtos<a/>
-            <a href="altpro.html">Alterar Produtos<a/>  
+            <a href="cadpro.html">Cadastro de Produtos</a>
+            <a href="listapro.html">Listagem de Produtos</a>
+            <a href="excpro.html">Excluir Produtos</a>
+                <a href="altpro.html">Alterar Produtos</a> 
         </nav>
+        
+                
+        <main></main>
         
         <footer>
             <center>
