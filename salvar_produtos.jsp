@@ -1,35 +1,39 @@
-<!DOCTYPE html>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="configura.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>   
     </head>
-    
     <body>
-        <header>
-            <h1>Sofia</h1>
-        </header>
-        
-        <nav>
-            <a href="cadpro.html" target="centro">Cadastro de Produtos</a>
-            <a href="listapro.html" target="centro">Listagem de Produtos</a>
-            <a href="excpro.html" target="centro">Excluir Produtos</a>
-            <a href="altpro.html" target="centro">Alterar Produtos</a> 
-        </nav>
-        
+        <%
+            int c;
+            String n, m;
+            double p;
+            c = Integer.parseInt(request.getParameter("codigo"));
+            n = request.getParameter("nome");
+            m = request.getParameter("marca");
+            p = Double.parseDouble(request.getParameter("preco"));
+            try{
+                Connection conecta;
+                PreparedStatement st;
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                conecta=DriveManager.getConnection("jdbc:mysql://localhost:3360/banco", "root", "senha");
                 
-        <main>
-            <iframe src="apresentacao.html" name="centro"></iframe>
-        </main>
-        
-        <footer>
-            <center>
-                <p>Desenvolvido por: Sofia</p>
-            </center>
-        </footer>
-        
-    </body>
+                st = conecta.prepareStatement("INSERT INTO produto VALUES(?,?,?,?)");
+                st.setInt(1,c);
+                st.setString(2, n);
+                st.setString(3, m);
+                st.setDouble(4, p);
+                st.executeUpdate();
+                out.print("Produto cadastrado com sucesso");
+            } catch (Exception x){
+                out.print("Mensagem de erro:" + x.getMessage());
+            }
+        %>
+    </body>  
 </html>
