@@ -22,7 +22,7 @@
                 Connection conecta;
                 PreparedStatement st;
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                conecta=DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "senha");
+                conecta=DriverManager.getConnection("jdbc:mysql://localhost:3307/banco", "site", "site");
                 
                 st = conecta.prepareStatement("INSERT INTO produto VALUES(?,?,?,?)");
                 st.setInt(1,c);
