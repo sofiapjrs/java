@@ -22,9 +22,9 @@
                 Connection conecta;
                 PreparedStatement st;
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                conecta=DriverManager.getConnection("jdbc:mysql://localhost:3307/banco", "site", "site");
+                conecta=DriverManager.getConnection("jdbc:mysql://localhost:3306/produtos", "root", "27072012s");
                 
-                st = conecta.prepareStatement("INSERT INTO produto VALUES(?,?,?,?)");
+                st = conecta.prepareStatement("INSERT INTO cadastro_de_produtos VALUES(?,?,?,?)");
                 st.setInt(1,c);
                 st.setString(2, n);
                 st.setString(3, m);
@@ -32,7 +32,16 @@
                 st.executeUpdate();
                 out.print("Produto cadastrado com sucesso");
             } catch (Exception x){
-                out.print("Mensagem de erro:" + x.getMessage());
+               out.print("Mensagem de erro:" + x.getMessage());
+               String erro = x.getMessage();
+               
+               if(erro.contains("Duplicate entry")) {
+               out.print("<p style='color#5cceee;font-size:20px'>Este código de produto já existe!</p>");
+               }
+               
+               else{
+               out.print("<p style='color#5cceee;font-size:20px'>Mensagem de erro:" + erro + "</p>");
+               } 
             }
         %>
     </body>  
