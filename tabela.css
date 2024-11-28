@@ -1,0 +1,23 @@
+table{
+    width: 70%;
+    background-color: background;
+    border: solid #3399ff 1px;
+    padding: 10px;
+}
+
+*{
+    margin: 0 auto
+}
+
+th{
+    background-color: #33ccff;
+    color: white;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+td{
+    border: solid white;
+    padding: 5px 10px;
+}
+
